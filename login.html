@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <title>Login | Bon Voyae</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/loginecadastro.css">
+</head>
+<body>
+    <form method="POST" action="login.php" id="formulario">
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça seu login para organizar sua<br>BON VOYAGE</h1>
+            <img src="./assets/img/viajante.svg" class="left-login-image" alt="Viajante">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" placeholder="Digite seu nome de usuário" autofocus="" required>
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Digite sua senha" required>
+                </div>
+                <input type="submit" class="btn-login" value="Login">
+                <font>Não tem uma conta? <a href="cadastro.html">Crie aqui</a></font>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

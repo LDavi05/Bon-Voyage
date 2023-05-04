@@ -1,0 +1,16 @@
+.chat-zone {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(3, 3, 3, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.chat-area {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <title>Bon Voyage | Sobre</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/button.chat.css">
+    <link rel="stylesheet" href="./assets/css/sobre.css">
+</head>
+<body>
+  <header>
+      <nav class="nav-bar">
+        <div class="logo">
+          <h1>Bon Voyage</h1>
+        </div>
+        
+        <div class="nav-list">
+          <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+            <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Configurações</a></li>
+          </ul>
+        </div>
+        
+        <div class="login-button">
+          <button onclose="location.href='login.html'"><a href="login.html">Entrar</a></button>
+        </div>
+        
+        <div class="mobile-menu-icon">
+          <button onclick="menuVisible()"><img class="icon" src="./assets/img/menu_white_36dp.svg" alt=""></button>
+        </div>
+      </nav>
+      
+      <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+            <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Configurações</a></li>
+        </ul>
+        
+        <div class="login-button">
+          <button onclick="location.href='login.html'"><a href="login.html">Entrar</a></button>
+        </div>
+      </div>
+    </header>
+    
+    <div class="sobre-area">
+      <h1>SOBRE O SITE</h1>
+      <br>
+      <p>
+        Este é um site desenvolvido com o objetivo de tornar mais fácil e interativo o planejamento de viagens para qualquer lugar do mundo.
+        Aqui você poderá ver recomendações de lugares que você possivelmente goste, conversar com outras pessoas para realizar um planejamento coletivo, entre outras opções.
+        
+        <br><br>
+      
+        Site desenvolido por: <a href="https://github.com/LDavi05">Lucas Davi</a>
+      </p>
+    </div>
+    
+    <div class="chat-buttons">
+       <button id="chat-btn"><i class="fa-solid fa-comments"></i></button>
+     </div>
+    
+    <script src="./assets/js/menu.js"></script>
+</body>
+</html>

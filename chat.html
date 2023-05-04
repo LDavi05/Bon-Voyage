@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Bon Voyage | Chat</title>
+   <link rel="stylesheet" href="assets/css/chat.css" type="text/css" media="all" />
+</head>
+
+<body>
+   <div class="msger">
+      <div class="msger-header">
+         <div class="msger-header-title">
+            Bon Voyage | Chat
+         </div>
+      </div>
+      <div class="msger-chat">
+         <div class="msg left-msg">
+            <div class="msg-bubble">
+               <div class="msg-info">
+                  <div class="msg-info-name">BOT</div>
+                  <div class="msg-info-time">12:45</div>
+               </div>
+               <div class="msg-text">
+                  Teste de mensagem
+               </div>
+            </div>
+         </div>
+      </div>
+      <form class="msger-inputarea">
+         <input type="text" class="msger-input" placeholder="Digite sua mensagem...">
+         <button type="submit" class="msger-send-btn">Enviar</button>
+      </form>
+   </div>
+   <script type="module">
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+   import { getDatabase, ref, set, push, onValue } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+
+    const firebaseConfig = {
+    apiKey: "AIzaSyABgmtms7uNQiC4GKGlHQAEikl_Z37VDmY",
+    authDomain: "webbon-voyage.firebaseapp.com",
+    databaseURL: "https://webbon-voyage-default-rtdb.firebaseio.com",
+    projectId: "webbon-voyage",
+    storageBucket: "webbon-voyage.appspot.com",
+    messagingSenderId: "321392846183",
+    appId: "1:321392846183:web:d0358f2508cedb93b9fbc2"
+   };
+   const app = initializeApp(firebaseConfig);
+  
+   const database = getDatabase();
+   const messagesRef = ref(database, 'mensagens'); 
+   const form = document.querySelector('.msger-inputarea'); 
+   const formInput = document.querySelector('.msger-input');
+   var name = prompt("Digite seu nome");
+   var date = new Date();
+   
+   form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const message = formInput.value.trim(); 
+      if (message !== '') { 
+         push(messagesRef, {
+            name: name, 
+            message: message,
+            date: date.getHours() + ":" + date.getMinutes()
+         }); formInput.value = ''; 
+      } });
+   
+   onValue(messagesRef, (snapshot) => {
+      const messages = snapshot.val(); 
+      const messageList = document.querySelector('.left-msg'); 
+      messageList.innerHTML = ''; 
+      for (let id in messages) {
+         const message = messages[id]; 
+         const name = message.name; 
+         const text = message.message; 
+         const date = message.date; 
+         const messageElement = document.createElement('div'); 
+         messageElement.innerHTML = `<div class="msg-bubble">
+               <div class="msg-info">
+                  <div class="msg-info-name">${name}</div>
+                  <div class="msg-info-time">${date}</div>
+               </div>
+               <div class="msg-text">
+                  ${text}
+               </div>
+            </div>`; 
+         messageList.appendChild(messageElement); } });
+   </script>
+</body>
+
+</html>

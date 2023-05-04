@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <title>Home | Bon Voyage</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/carousel.css">
+    <link rel="stylesheet" href="./assets/css/button.chat.css">
+    <link rel="stylesheet" href="./assets/css/chat.css">
+    
+</head>
+<body>
+    <header>
+      <nav class="nav-bar">
+        <div class="logo">
+          <h1>Bon Voyage</h1>
+        </div>
+        
+        <div class="nav-list">
+          <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+            <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Configurações</a></li>
+          </ul>
+        </div>
+        
+        <div class="login-button">
+          <button onclose="location.href='login.html'"><a href="login.html">Entrar</a></button>
+        </div>
+        
+        <div class="mobile-menu-icon">
+          <button onclick="menuVisible()"><img class="icon" src="./assets/img/menu_white_36dp.svg" alt=""></button>
+        </div>
+      </nav>
+      
+      <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+            <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Configurações</a></li>
+        </ul>
+        
+        <div class="login-button">
+          <button onclick="location.href='login.html'"><a href="login.html">Entrar</a></button>
+        </div>
+      </div>
+    </header>
+    
+    <div class="carousel-container">
+      <button id="prev-btn"><i class="fa-solid fa-angle-left"></i></button>
+      <div class="images-container">
+        <img src="./assets/img/hotelTeste01.jpeg" alt="Hotel1" class="image active">
+        <img src="./assets/img/hotelTeste02.jpeg" alt="Hotel2" class="image">
+        <img src="./assets/img/hotelTeste03.jpeg" alt="Hotel3" class="image">
+        <img src="./assets/img/hotelTeste04.jpeg" alt="Hotel4" class="image">
+        <img src="./assets/img/hotelTeste05.jpeg" alt="Hotel5" class="image">
+      </div>
+      <button id="next-btn"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+    
+     <div class="chat-buttons">
+       <button id="chat-btn"><i class="fa-solid fa-comments"></i></button>
+     </div>
+
+     <!--<div class="chat-zone">
+      <form action="" class="chat-area">
+        <input type="text" class="chat-input">
+        <button type="submit" class="submit-btn"><i class="fa-duotone fa-paper-plane-top"></i></button>
+      </form>
+     </div>-->
+    
+    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/carousel.js"></script>
+</body>
+</html>

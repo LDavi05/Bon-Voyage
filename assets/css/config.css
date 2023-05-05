@@ -1,5 +1,5 @@
 .config-zone {
-  position: fixed;
+  position: relative;
   left: 0;
   top: 0;
   width: 100vw;
@@ -35,7 +35,7 @@
 }
 
 .close-config {
-  position: fixed;
+  position: absolute;
   color: rgba(3, 3, 3, 0.3);
   font-size: 1.5rem;
   top: 5px;

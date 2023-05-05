@@ -1,0 +1,85 @@
+body.darkmode {
+  background: #333;
+  color: #fff;
+}
+
+body.darkmode header {
+  background: #000;
+  color: #fff;
+}
+
+body.darkmode header .login-button button {
+  background: #333;
+  color: #fff;
+}
+
+body.darkmode .carousel-container #prev-btn,
+body.darkmode .carousel-container #next-btn {
+  color: #fff;
+}
+
+body.darkmode .chat-buttons button {
+  background: #000;
+}
+
+body.darkmode .sobre-area .github-link {
+  color: #969696;
+}
+
+body.darkmode .main-login {
+  background: #333;
+  color: #fff;
+}
+
+body.darkmode .left-login h1 {
+  color: #fff;
+}
+
+body.darkmode .card-login {
+  background: #000;
+}
+
+body.darkmode .card-login h1 {
+  color: #fff;
+}
+
+body.darkmode .card-login .textfield label {
+  color: #fff;
+}
+
+body.darkmode .card-login .textfield input {
+  color: #333;
+}
+
+body.darkmode .card-login .textfield input::placeholder {
+  color: #000;
+}
+
+body.darkmode .card-login .btn-login {
+  background: #333;
+  color: #fff;
+  box-shadow: none;
+}
+
+body.darkmode .card-login font a {
+  color: #c9c8c7;
+}
+
+body.darkmode .textfield textarea::placeholder {
+  color: #000;
+}
+
+body.darkmode .config-zone .config-area {
+  background: #000;
+  border: 2px solid #fff;
+}
+
+body.darkmode .config-zone .config-area .config-header #config-title {
+  color: #c9c8c7;
+}
+
+body.darkmode .config-zone .config-area .mode-btn .icon-theme,
+body.darkmode .config-zone .config-area .mode-btn .mode-text,
+body.darkmode .config-zone .config-area .config-header .close-config {
+  color: #fff;
+}

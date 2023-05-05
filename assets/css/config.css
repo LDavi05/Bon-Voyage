@@ -1,0 +1,60 @@
+.config-zone {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(3, 3, 3, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.config-area {
+  position: fixed;
+  background: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.mode-text {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.mode-btn i {
+  color: #000;
+  font-size: 1.5rem;
+}
+
+#config-title {
+  color: #03afff;
+}
+
+.close-config {
+  position: fixed;
+  color: rgba(3, 3, 3, 0.3);
+  font-size: 1.5rem;
+  bottom: 425px;
+  right: 490px;
+  cursor: pointer;
+}
+
+.config-header {
+  display: flex;
+}
+
+.config-closed {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .close-config {
+    position: fixed;
+    bottom: 450px;
+    right: 55px;
+  }
+}

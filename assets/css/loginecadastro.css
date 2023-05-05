@@ -33,6 +33,14 @@ font
     align-items: center;
 }
 
+.contato-area {
+  margin-top: 140px;
+}
+
+.cadastro-area {
+  margin-top: 30px;
+}
+
 .left-login
 {
     width: 50vw;
@@ -52,7 +60,7 @@ font
 
 .left-login-image
 {
-    width: 35vw;
+    width: 28vw;
     user-select: none;
 }
 
@@ -168,6 +176,15 @@ font
     .main-login
     {
         flex-direction: column;
+        margin-top: 90px;
+    }
+    
+    .contato-area {
+      margin-top: 0;
+    }
+    
+    .cadastro-area {
+      margin-top: 0;
     }
     
     .left-login h1

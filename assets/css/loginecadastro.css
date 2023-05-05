@@ -156,6 +156,8 @@ font
     border: none;
     border-radius: 8px;
     resize: none;
+    padding: 10px;
+    font-size: 12pt;
 }
 
 .textfield textarea::placeholder

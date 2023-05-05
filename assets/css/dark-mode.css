@@ -104,7 +104,8 @@ body.darkmode .msger .msger-inputarea {
 }
 
 body.darkmode .msger .msger-inputarea .msger-input {
-  background: #8e9299;
+  background: #5b5b5b;
+  color: #fff;
 }
 
 body.darkmode .msger .msger-inputarea .msger-input::placeholder {

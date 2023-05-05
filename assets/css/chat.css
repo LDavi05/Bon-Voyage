@@ -56,7 +56,7 @@ body {
   width: 100%;
   max-width: 867px;
   margin: 25px 10px;
-  height: calc(100% - 50px);
+  height: calc(100% - 0px);
   border: var(--border);
   border-radius: 5px;
   background: var(--msger-bg);
@@ -148,6 +148,11 @@ body {
 .msger-input {
   flex: 1;
   background: #ddd;
+  outline: none;
+  transition: all .2s ease;
+}
+.msger-input:focus {
+   border: 2px solid #03afff;
 }
 .msger-send-btn {
   margin-left: 10px;

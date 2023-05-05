@@ -5,9 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,  initial-scale=1.0">
     <title>Login | Bon Voyae</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="./assets/css/loginecadastro.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/dark-mode.css">
+    <link rel="stylesheet" href="./assets/css/config.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
-<body>
+<body class="body">
+  <header>
+      <nav class="nav-bar">
+        <div class="logo">
+          <h1>Bon Voyage</h1>
+        </div>
+        
+        <div class="nav-list">
+          <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+            <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+            <li class="nav-item"><a href="#" class="nav-link config-btn">Configurações</a></li>
+          </ul>
+        </div>
+        
+        <div class="login-button">
+          <button onclose="location.href='login.html'"><a href="login.html">Entrar</a></button>
+        </div>
+        
+        <div class="mobile-menu-icon">
+          <button onclick="menuVisible()"><img class="icon" src="./assets/img/menu_white_36dp.svg" alt=""></button>
+        </div>
+      </nav>
+      
+      <div class="mobile-menu">
+        <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+            <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+            <li class="nav-item"><a href="#" class="nav-link config-btn2">Configurações</a></li>
+        </ul>
+        
+        <div class="login-button">
+          <button onclick="location.href='login.html'"><a href="login.html">Entrar</a></button>
+        </div>
+      </div>
+    </header>
+    
     <form method="POST" action="login.php" id="formulario">
     <div class="main-login">
         <div class="left-login">
@@ -31,5 +75,61 @@
         </div>
     </div>
     </form>
+    
+    <div class="config-zone config-closed">
+      <div class="config-area">
+        <div class="config-header">
+          <h1 id="config-title">Configurações</h1>
+          <i class="close-config fa-solid fa-x"></i>
+        </div>
+        <a class="mode-btn">
+          <i class="bx icon-theme bx-moon"></i>
+          <span class="mode-text">Modo Escuro</span>
+        </a>
+      </div>
+    </div>
+    
+    <script src="./assets/js/menu.js"></script>
+    <script>
+const body = document.querySelector(".body");
+const modeBTN = document.querySelector(".mode-btn");
+const iconTheme = document.querySelector(".icon-theme");
+const modeText = document.querySelector(".mode-text");
+const img = document.querySelector(".left-login-image");
+
+if (localStorage.getItem("themeMode") === null) {
+  localStorage.setItem("themeMode", "light");
+}
+
+modeBTN.addEventListener("click", () => {
+  if (localStorage.getItem("themeMode") === "dark") {
+    localStorage.setItem("themeMode", "light");
+  } else {
+    localStorage.setItem("themeMode", "dark");
+  }
+  changeTheme();
+});
+
+function changeTheme() {
+  if (localStorage.getItem("themeMode") === "dark") {
+    body.classList.add("darkmode");
+    modeText.innerHTML = "Modo Claro";
+    iconTheme.classList.remove("bx-moon");
+    iconTheme.classList.add("bx-sun");
+    img.src = "./assets/img/darkmode-viajante.svg";
+  } else {
+    body.classList.remove("darkmode");
+    modeText.innerHTML = "Modo Escuro";
+    iconTheme.classList.remove("bx-sun");
+    iconTheme.classList.add("bx-moon");
+    img.src = "./assets/img/viajante.svg";
+  }
+}
+
+console.log(localStorage.getItem("themeMode"))
+changeTheme();
+    </script>
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/darkmode.js"></script>
 </body>
 </html>

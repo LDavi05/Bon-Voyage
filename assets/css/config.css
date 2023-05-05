@@ -13,7 +13,7 @@
 }
 
 .config-area {
-  position: relative;
+  position: fixed;
   background: #fff;
   padding: 40px;
   border-radius: 5px;

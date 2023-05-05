@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="./assets/css/menu.css">
     <link rel="stylesheet" href="./assets/css/carousel.css">
     <link rel="stylesheet" href="./assets/css/button.chat.css">
-    <link rel="stylesheet" href="./assets/css/chat.css">
+    <link rel="stylesheet" href="./assets/css/config.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/dark-mode.css">
     
 </head>
-<body>
+<body class="body">
     <header>
       <nav class="nav-bar">
         <div class="logo">
@@ -25,7 +27,7 @@
             <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
             <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
             <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Configurações</a></li>
+            <li class="nav-item"><a href="#" class="nav-link config-btn">Configurações</a></li>
           </ul>
         </div>
         
@@ -43,7 +45,7 @@
             <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
             <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
             <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Configurações</a></li>
+            <li class="nav-item"><a href="#" class="nav-link config-btn2">Configurações</a></li>
         </ul>
         
         <div class="login-button">
@@ -68,14 +70,22 @@
        <button id="chat-btn"><i class="fa-solid fa-comments"></i></button>
      </div>
 
-     <!--<div class="chat-zone">
-      <form action="" class="chat-area">
-        <input type="text" class="chat-input">
-        <button type="submit" class="submit-btn"><i class="fa-duotone fa-paper-plane-top"></i></button>
-      </form>
-     </div>-->
+    <div class="config-zone config-closed">
+      <div class="config-area">
+        <div class="config-header">
+          <h1 id="config-title">Configurações</h1>
+          <i class="close-config fa-solid fa-x"></i>
+        </div>
+        <a class="mode-btn">
+          <i class="bx icon-theme bx-moon"></i>
+          <span class="mode-text">Modo Escuro</span>
+        </a>
+      </div>
+    </div>
     
     <script src="./assets/js/menu.js"></script>
     <script src="./assets/js/carousel.js"></script>
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/darkmode.js"></script>
 </body>
 </html>

@@ -71,7 +71,7 @@ body.darkmode .textfield textarea::placeholder {
 
 body.darkmode .config-zone .config-area {
   background: #000;
-  border: 2px solid #fff;
+  border: 2px solid #c9c8c7;
 }
 
 body.darkmode .config-zone .config-area .config-header #config-title {
@@ -81,5 +81,32 @@ body.darkmode .config-zone .config-area .config-header #config-title {
 body.darkmode .config-zone .config-area .mode-btn .icon-theme,
 body.darkmode .config-zone .config-area .mode-btn .mode-text,
 body.darkmode .config-zone .config-area .config-header .close-config {
+  color: #fff;
+}
+
+body.darkmode .msg-bubble {
+  background: #333;
+}
+
+body.darkmode .msger .msger-chat {
+  background: #4c4d4f;
+}
+
+body.darkmode .msger .msger-header,
+body.darkmode .msger .msger-inputarea {
+  background: #393a3b;
+  color: #fff;
+}
+body.darkmode .msger,
+body.darkmode .msger .msger-header,
+body.darkmode .msger .msger-inputarea {
+  border-color: #2d2e2e;
+}
+
+body.darkmode .msger .msger-inputarea .msger-input {
+  background: #8e9299;
+}
+
+body.darkmode .msger .msger-inputarea .msger-input::placeholder {
   color: #fff;
 }

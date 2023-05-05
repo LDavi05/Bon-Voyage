@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 .chat-zone {
     position: fixed;
     left: 0;
@@ -145,7 +151,7 @@ body {
 }
 .msger-send-btn {
   margin-left: 10px;
-  background: #1686ed;
+  background: #03afff;
   color: #fff;
   font-weight: bold;
   cursor: pointer;

@@ -1,96 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
-    <title>Bon Voyage | Sobre</title>
 
-    <!-- Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/favicon/site.webmanifest">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/menu.css">
-    <link rel="stylesheet" href="./assets/css/button.chat.css">
-    <link rel="stylesheet" href="./assets/css/sobre.css">
-    <link rel="stylesheet" href="./assets/css/dark-mode.css">
-    <link rel="stylesheet" href="./assets/css/config.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+   <title>Bon Voyage | Sobre</title>
+   
+   <!-- Icon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+   <link rel="manifest" href="./assets/favicon/site.webmanifest">
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <link rel="stylesheet" href="./assets/css/menu.css">
+   <link rel="stylesheet" href="./assets/css/button.chat.css">
+   <link rel="stylesheet" href="./assets/css/sobre.css">
+   <link rel="stylesheet" href="./assets/css/dark-mode.css">
+   <link rel="stylesheet" href="./assets/css/config.css">
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
+
 <body class="body">
-  <header>
+   <header>
       <nav class="nav-bar">
-        <div class="logo">
-          <h1>Bon Voyage</h1>
-        </div>
-        
-        <div class="nav-list">
-          <ul>
-            <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
-            <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
-            <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
-            <li class="nav-item"><a href="#" class="nav-link config-btn">Configurações</a></li>
-          </ul>
-        </div>
-        
-        <div class="login-button">
-          <button onclose="location.href='login.html'"><a href="login.html">Entrar</a></button>
-        </div>
-        
-        <div class="mobile-menu-icon">
-          <button onclick="menuVisible()"><img class="icon" src="./assets/img/menu_white_36dp.svg" alt=""></button>
-        </div>
+         <div class="logo">
+            <h1>Bon Voyage</h1>
+         </div>
+         <div class="nav-list">
+            <ul>
+               <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+               <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+               <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+               <li class="nav-item"><a href="#" class="nav-link config-btn">Configurações</a></li>
+            </ul>
+         </div>
+         <div class="login-button">
+            <button onclose="location.href='login.html'"><a href="login.html">Entrar</a></button>
+         </div>
+         
+         <div class="mobile-menu-icon">
+            <button onclick="menuVisible()"><img class="icon" src="./assets/img/menu_white_36dp.svg" alt=""></button>
+         </div>
       </nav>
-      
       <div class="mobile-menu">
-        <ul>
+         <ul>
             <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
             <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
             <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
             <li class="nav-item"><a href="#" class="nav-link config-btn2">Configurações</a></li>
-        </ul>
-        
-        <div class="login-button">
-          <button onclick="location.href='login.html'"><a href="login.html">Entrar</a></button>
-        </div>
+         </ul>
+         <div class="login-button">
+            <button onclick="location.href='login.html'"><a href="login.html">Entrar</a></button>
+         </div>
       </div>
-    </header>
-    
-    <div class="sobre-area">
-      <h1>SOBRE O SITE</h1>
-      <br>
-      <p>
-        Este é um site desenvolvido com o objetivo de tornar mais fácil e interativo o planejamento de viagens para qualquer lugar do mundo.
-        Aqui você poderá ver recomendações de lugares que você possivelmente goste, conversar com outras pessoas para realizar um planejamento coletivo, entre outras opções.
-        
-        <br><br>
-      
-        Desenvolvedores: <a href="https://github.com/LDavi05" class="github-link">Lucas Davi</a> e <a href="https://github.com/luiz-developer" class="github-link">Luiz André</a>
-      </p>
-    </div>
-    
-    <div class="chat-buttons">
-       <button id="chat-btn" onclick="location.href='chat.html'"><i class="fa-solid fa-comments"></i></button>
-     </div>
-     
-     <div class="config-zone config-closed">
+   </header>
+   <div class="container">
+      <div class="sobre-area">
+         <h1>SOBRE O SITE</h1>
+         <div class="">
+            <p>
+               Este é um site desenvolvido com o objetivo de tornar mais fácil e interativo o planejamento de viagens
+               para
+               qualquer lugar do mundo.
+               Aqui você poderá ver recomendações de lugares que você possivelmente goste, conversar com outras pessoas
+               para realizar um planejamento coletivo, entre outras opções.
+            </p>
+            <p>
+               Desenvolvedores: <a href="https://github.com/LDavi05" class="github-link">Lucas Davi</a> e <a
+                  href="https://github.com/luiz-developer" class="github-link">Luiz Leal</a>
+            </p>
+         </div>
+      </div>
+   </div>
+   <div class="chat-buttons">
+      <button id="chat-btn" onclick="location.href='chat.html'"><i class="fa-solid fa-comments"></i></button>
+   </div>
+   <div class="config-zone config-closed">
       <div class="config-area">
-        <div class="config-header">
-          <h1 id="config-title">Configurações</h1>
-          <i class="close-config fa-solid fa-x"></i>
-        </div>
-        <a class="mode-btn">
-          <i class="bx icon-theme bx-moon"></i>
-          <span class="mode-text">Modo Escuro</span>
-        </a>
+         <div class="config-header">
+            <h1 id="config-title">Configurações</h1>
+            <i class="close-config fa-solid fa-x"></i>
+         </div>
+         <a class="mode-btn">
+            <i class="bx icon-theme bx-moon"></i>
+            <span class="mode-text">Modo Escuro</span>
+         </a>
       </div>
-    </div>
-    
-    <script src="./assets/js/menu.js"></script>
-    <script src="./assets/js/config.js"></script>
-    <script src="./assets/js/darkmode.js"></script>
+   </div>
+   <script src="./assets/js/menu.js"></script>
+   <script src="./assets/js/config.js"></script>
+   <script src="./assets/js/darkmode.js"></script>
 </body>
+
 </html>

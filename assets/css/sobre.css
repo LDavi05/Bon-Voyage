@@ -1,5 +1,5 @@
 .sobre-area {
-  margin: 150px 40px 0 40px;
+  margin-top: 150px;
 }
 
 .sobre-area h1 {
@@ -8,6 +8,6 @@
 
 @media screen and (max-width: 700px) {
   .sobre-area {
-    margin: 150px 20px 0 40px;
+   margin-top: 150px;
   }
 }

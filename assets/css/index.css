@@ -1,0 +1,53 @@
+.promotions-area {
+   margin-top: 12rem;
+}
+
+.small-title {
+   font-size: 0.8rem;
+}
+
+.promotion {
+   border-radius: 10px;
+   padding: 12px;
+   box-shadow: 1px 1px 10px #9c9c9c;
+   position: relative;
+}
+
+.promotions-content {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 1.5rem;
+}
+
+.strong-title {
+   font-weight: bold;
+   font-size: 1.5rem;
+}
+
+.price-area {
+   display: flex;
+   flex-direction: row;
+}
+
+.price {
+   font-weight: bold;
+   margin-left: 5px;
+}
+
+.stamp {
+   position: absolute;
+   top: 7px;
+   right: 7px;
+   background: #03afff;
+   padding: 1px 7px;
+   color: #fff;
+   font-size: 0.8rem;
+   border-radius: 50px;
+}
+
+@media screen and (max-width: 768px) {
+   .promotions-area {
+      margin-top: 1rem;
+   }
+   
+}

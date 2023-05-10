@@ -1,97 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
-    <title>Home | Bon Voyage</title>
 
-    <!-- Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/favicon/site.webmanifest">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/menu.css">
-    <link rel="stylesheet" href="./assets/css/carousel.css">
-    <link rel="stylesheet" href="./assets/css/button.chat.css">
-    <link rel="stylesheet" href="./assets/css/config.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/dark-mode.css">
-    
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+   <title>Home | Bon Voyage</title>
+   
+   <!-- Icon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+   <link rel="manifest" href="./assets/favicon/site.webmanifest">
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="./assets/css/index.css">
+   <link rel="stylesheet" href="./assets/css/menu.css">
+   <link rel="stylesheet" href="./assets/css/carousel.css">
+   <link rel="stylesheet" href="./assets/css/button.chat.css">
+   <link rel="stylesheet" href="./assets/css/config.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="./assets/css/dark-mode.css">
+   
 </head>
+
 <body class="body">
-    <header>
+   <header>
       <nav class="nav-bar">
-        <div class="logo">
-          <h1>Bon Voyage</h1>
-        </div>
-        
-        <div class="nav-list">
-          <ul>
-            <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
-            <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
-            <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
-            <li class="nav-item"><a href="#" class="nav-link config-btn">Configurações</a></li>
-          </ul>
-        </div>
-        
-        <div class="login-button">
-          <button onclose="location.href='login.html'"><a href="login.html">Entrar</a></button>
-        </div>
-        
-        <div class="mobile-menu-icon">
-          <button onclick="menuVisible()"><img class="icon" src="./assets/img/menu_white_36dp.svg" alt=""></button>
-        </div>
+         <div class="logo">
+            <h1>Bon Voyage</h1>
+         </div>
+         
+         <div class="nav-list">
+            <ul>
+               <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+               <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+               <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+               <li class="nav-item"><a href="#" class="nav-link config-btn">Configurações</a></li>
+            </ul>
+         </div>
+         
+         <div class="login-button">
+            <button onclose="location.href='login.html'"><a href="login.html">Entrar</a></button>
+         </div>
+         
+         <div class="mobile-menu-icon">
+            <button onclick="menuVisible()"><img class="icon" src="./assets/img/menu_white_36dp.svg" alt=""></button>
+         </div>
       </nav>
       
       <div class="mobile-menu">
-        <ul>
+         <ul>
             <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
             <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
             <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
             <li class="nav-item"><a href="#" class="nav-link config-btn2">Configurações</a></li>
-        </ul>
-        
-        <div class="login-button">
-          <button onclick="location.href='login.html'"><a href="login.html">Entrar</a></button>
-        </div>
+         </ul>
+         
+         <div class="login-button">
+            <button onclick="location.href='login.html'"><a href="login.html">Entrar</a></button>
+         </div>
       </div>
-    </header>
-    
-    <div class="carousel-container">
+   </header>
+   
+   <div class="carousel-container">
       <button id="prev-btn"><i class="fa-solid fa-angle-left"></i></button>
       <div class="images-container">
-        <img src="./assets/img/hotelTeste01.jpeg" alt="Hotel1" class="image active">
-        <img src="./assets/img/hotelTeste02.jpeg" alt="Hotel2" class="image">
-        <img src="./assets/img/hotelTeste03.jpeg" alt="Hotel3" class="image">
-        <img src="./assets/img/hotelTeste04.jpeg" alt="Hotel4" class="image">
-        <img src="./assets/img/hotelTeste05.jpeg" alt="Hotel5" class="image">
+         <img src="./assets/img/hotelTeste01.jpeg" alt="Hotel1" class="image active">
+         <img src="./assets/img/hotelTeste02.jpeg" alt="Hotel2" class="image">
+         <img src="./assets/img/hotelTeste03.jpeg" alt="Hotel3" class="image">
+         <img src="./assets/img/hotelTeste04.jpeg" alt="Hotel4" class="image">
+         <img src="./assets/img/hotelTeste05.jpeg" alt="Hotel5" class="image">
       </div>
       <button id="next-btn"><i class="fa-solid fa-angle-right"></i></button>
-    </div>
-    
-     <div class="chat-buttons">
-       <button id="chat-btn" onclick="location.href='chat.html'"><i class="fa-solid fa-comments"></i></button>
-     </div>
-
-    <div class="config-zone config-closed">
-      <div class="config-area">
-        <div class="config-header">
-          <h1 id="config-title">Configurações</h1>
-          <i class="close-config fa-solid fa-x"></i>
-        </div>
-        <a class="mode-btn">
-          <i class="bx icon-theme bx-moon"></i>
-          <span class="mode-text">Modo Escuro</span>
-        </a>
+   </div>
+   
+   <div class="promotions-area container">
+      <h1 class="promotions-title">Viagens</h1>
+      <div class="promotions-content">
+         <div class="promotion">
+            <div>
+               <div class="small-title">viagem para</div>
+               <div class="strong-title">França</div>
+            </div>
+            <div class="price-area">
+               <div class="coin-code">BRL</div>
+               <div class="price">7.700</div>
+            </div>
+            <div class="stamp">
+               -12%
+            </div>
+         </div>
+         <div class="promotion">
+            <div>
+               <div class="small-title">viagem para</div>
+               <div class="strong-title">Chile</div>
+            </div>
+            <div class="price-area">
+               <div class="coin-code">BRL</div>
+               <div class="price">3.453</div>
+            </div>
+            <div class="stamp">
+               -10%
+            </div>
+         </div>
+         <div class="promotion">
+            <div>
+               <div class="small-title">viagem para</div>
+               <div class="strong-title">Itália</div>
+            </div>
+            <div class="price-area">
+               <div class="coin-code">BRL</div>
+               <div class="price">8.890</div>
+            </div>
+         </div>
+         <div class="promotion">
+            <div>
+               <div class="small-title">viagem para</div>
+               <div class="strong-title">Peru</div>
+            </div>
+            <div class="price-area">
+               <div class="coin-code">BRL</div>
+               <div class="price">2.800</div>
+            </div>
+            <div class="stamp">
+               -15%
+            </div>
+         </div>
+         <div class="promotion">
+            <div>
+               <div class="small-title">viagem para</div>
+               <div class="strong-title">EUA</div>
+            </div>
+            <div class="price-area">
+               <div class="coin-code">BRL</div>
+               <div class="price">3.698</div>
+            </div>
+         </div>
+         <div class="promotion">
+            <div>
+               <div class="small-title">viagem para</div>
+               <div class="strong-title">Alemanha</div>
+            </div>
+            <div class="price-area">
+               <div class="coin-code">BRL</div>
+               <div class="price">8.356</div>
+            </div>
+         </div>
+         <div class="promotion">
+            <div>
+               <div class="small-title">viagem para</div>
+               <div class="strong-title">Portugal</div>
+            </div>
+            <div class="price-area">
+               <div class="coin-code">BRL</div>
+               <div class="price">6.876</div>
+            </div>
+         </div>
       </div>
-    </div>
-    
-    <script src="./assets/js/menu.js"></script>
-    <script src="./assets/js/carousel.js"></script>
-    <script src="./assets/js/config.js"></script>
-    <script src="./assets/js/darkmode.js"></script>
+   </div>
+   
+   <div class="chat-buttons">
+      <button id="chat-btn" onclick="location.href='chat.html'"><i class="fa-solid fa-comments"></i></button>
+   </div>
+   
+   <div class="config-zone config-closed">
+      <div class="config-area">
+         <div class="config-header">
+            <h1 id="config-title">Configurações</h1>
+            <i class="close-config fa-solid fa-x"></i>
+         </div>
+         <a class="mode-btn">
+            <i class="bx icon-theme bx-moon"></i>
+            <span class="mode-text">Modo Escuro</span>
+         </a>
+      </div>
+   </div>
+   
+   <script src="./assets/js/menu.js"></script>
+   <script src="./assets/js/carousel.js"></script>
+   <script src="./assets/js/config.js"></script>
+   <script src="./assets/js/darkmode.js"></script>
 </body>
+
 </html>

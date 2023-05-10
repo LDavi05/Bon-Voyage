@@ -51,6 +51,7 @@
       const app = initializeApp(firebaseConfig);
      
       const database = getDatabase();
+      const messageArea = document.querySelector('.msger')
       const messagesRef = ref(database, 'mensagens'); 
       const form = document.querySelector('.msger-inputarea'); 
       const formInput = document.querySelector('.msger-input');
@@ -66,7 +67,8 @@
                message: message,
                date: date.getHours() + ":" + date.getMinutes()
             }); formInput.value = ''; 
-         } });
+         } 
+      });
       
       onValue(messagesRef, (snapshot) => {
          const messages = snapshot.val(); 
@@ -87,7 +89,10 @@
                      ${text}
                   </div>
                </div>`; 
-      messageList.appendChild(messageElement); } });
+            messageList.appendChild(messageElement);
+            messageList.scrollTop = messageList.scrollHeight;
+         }
+      });
    </script>
    <script type="text/javascript" charset="utf-8">
       const body = document.querySelector(".body");

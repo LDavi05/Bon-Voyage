@@ -86,10 +86,6 @@
       const formInput = document.querySelector('.msger-input')
       var name = prompt('Digite seu nome')
       var date = new Date()
-      let minutes
-      /*if (minutes < 10) {
-         
-      */
       form.addEventListener('submit', (event) => {
         event.preventDefault()
         const message = formInput.value.trim()
@@ -126,7 +122,8 @@
                   </div>
                </div>`
           messageList.appendChild(messageElement)
-         }
+          messageElement.scrollIntoView({ behavior: 'auto' })
+        }
       })
     </script>
     <script type="text/javascript" charset="utf-8">

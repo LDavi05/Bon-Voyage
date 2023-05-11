@@ -1,89 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bon Voyage | Chat</title>
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Bon Voyage | Chat</title>
-   
-   <!-- Icon -->
-   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-   <link rel="manifest" href="./assets/favicon/site.webmanifest">
-   
-   <link rel="stylesheet" href="assets/css/chat.css" type="text/css" media="all" />
-   <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
-   <link rel="stylesheet" href="./assets/css/dark-mode.css">
-</head>
+    <!-- Icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
-<body class="body">
-   <div class="msger">
+    <link
+      rel="stylesheet"
+      href="assets/css/chat.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/style.css"
+      type="text/css"
+      media="all"
+    />
+    <link rel="stylesheet" href="./assets/css/dark-mode.css" />
+  </head>
+
+  <body class="body">
+    <div class="msger">
       <div class="msger-header">
-         <div class="msger-header-title">
-            Bon Voyage | Chat
-         </div>
+        <div class="msger-header-title">Bon Voyage | Chat</div>
       </div>
       <div class="msger-chat">
-         <div class="msg left-msg">
-            CARREGANDO...
-         </div>
+        <div class="msg left-msg">CARREGANDO...</div>
       </div>
       <form class="msger-inputarea">
-         <input type="text" class="msger-input" placeholder="Digite sua mensagem...">
-         <button type="submit" class="msger-send-btn">Enviar</button>
+        <input
+          type="text"
+          class="msger-input"
+          placeholder="Digite sua mensagem..."
+        />
+        <button type="submit" class="msger-send-btn">Enviar</button>
       </form>
-   </div>
-   <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
-      import { getDatabase, ref, set, push, onValue } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
-   
+    </div>
+    <script type="module">
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js'
+      import {
+        getDatabase,
+        ref,
+        set,
+        push,
+        onValue,
+      } from 'https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js'
+
       const firebaseConfig = {
-      apiKey: "AIzaSyABgmtms7uNQiC4GKGlHQAEikl_Z37VDmY",
-      authDomain: "webbon-voyage.firebaseapp.com",
-      databaseURL: "https://webbon-voyage-default-rtdb.firebaseio.com",
-      projectId: "webbon-voyage",
-      storageBucket: "webbon-voyage.appspot.com",
-      messagingSenderId: "321392846183",
-      appId: "1:321392846183:web:d0358f2508cedb93b9fbc2"
-      };
-      const app = initializeApp(firebaseConfig);
-     
-      const database = getDatabase();
+        apiKey: 'AIzaSyABgmtms7uNQiC4GKGlHQAEikl_Z37VDmY',
+        authDomain: 'webbon-voyage.firebaseapp.com',
+        databaseURL: 'https://webbon-voyage-default-rtdb.firebaseio.com',
+        projectId: 'webbon-voyage',
+        storageBucket: 'webbon-voyage.appspot.com',
+        messagingSenderId: '321392846183',
+        appId: '1:321392846183:web:d0358f2508cedb93b9fbc2',
+      }
+      const app = initializeApp(firebaseConfig)
+
+      const database = getDatabase()
       const messageArea = document.querySelector('.msger')
-      const messagesRef = ref(database, 'mensagens'); 
-      const form = document.querySelector('.msger-inputarea'); 
-      const formInput = document.querySelector('.msger-input');
-      var name = prompt("Digite seu nome");
-      var date = new Date();
-      let minutes;
+      const messagesRef = ref(database, 'mensagens')
+      const form = document.querySelector('.msger-inputarea')
+      const formInput = document.querySelector('.msger-input')
+      var name = prompt('Digite seu nome')
+      var date = new Date()
+      let minutes
       /*if (minutes < 10) {
          
       */
       form.addEventListener('submit', (event) => {
-         event.preventDefault();
-         const message = formInput.value.trim(); 
-         if (message !== '') { 
-            push(messagesRef, {
-               name: name, 
-               message: message,
-               date: date.getHours() + ":" + date.getMinutes().toString().padStart(2, "0")
-            }); formInput.value = ''; 
-         } 
-      });
-      
+        event.preventDefault()
+        const message = formInput.value.trim()
+        if (message !== '') {
+          push(messagesRef, {
+            name: name,
+            message: message,
+            date:
+              date.getHours() +
+              ':' +
+              date.getMinutes().toString().padStart(2, '0'),
+          })
+          formInput.value = ''
+        }
+      })
+
       onValue(messagesRef, (snapshot) => {
-         const messages = snapshot.val(); 
-         const messageList = document.querySelector('.left-msg'); 
-         messageList.innerHTML = ''; 
-         for (let id in messages) {
-            const message = messages[id]; 
-            const name = message.name; 
-            const text = message.message; 
-            const date = message.date; 
-            const messageElement = document.createElement('div'); 
-            messageElement.innerHTML = `<div class="msg-bubble">
+        const messages = snapshot.val()
+        const messageList = document.querySelector('.left-msg')
+        messageList.innerHTML = ''
+        for (let id in messages) {
+          const message = messages[id]
+          const name = message.name
+          const text = message.message
+          const date = message.date
+          const messageElement = document.createElement('div')
+          messageElement.innerHTML = `<div class="msg-bubble">
                   <div class="msg-info">
                      <div class="msg-info-name">${name}</div>
                      <div class="msg-info-time">${date}</div>
@@ -91,30 +124,28 @@
                   <div class="msg-text">
                      ${text}
                   </div>
-               </div>`; 
-            messageList.appendChild(messageElement);
+               </div>`
+          messageList.appendChild(messageElement)
          }
-      });
-   </script>
-   <script type="text/javascript" charset="utf-8">
-      const body = document.querySelector(".body");
-      
-      if (localStorage.getItem("themeMode") === null) {
-        localStorage.setItem("themeMode", "light");
+      })
+    </script>
+    <script type="text/javascript" charset="utf-8">
+      const body = document.querySelector('.body')
+
+      if (localStorage.getItem('themeMode') === null) {
+        localStorage.setItem('themeMode', 'light')
       }
-      
+
       function changeTheme() {
-        if (localStorage.getItem("themeMode") === "dark") {
-          body.classList.add("darkmode");
+        if (localStorage.getItem('themeMode') === 'dark') {
+          body.classList.add('darkmode')
         } else {
-          body.classList.remove("darkmode");
+          body.classList.remove('darkmode')
         }
       }
-      
-      console.log(localStorage.getItem("themeMode"))
-      changeTheme();
 
-   </script>
-</body>
-
+      console.log(localStorage.getItem('themeMode'))
+      changeTheme()
+    </script>
+  </body>
 </html>

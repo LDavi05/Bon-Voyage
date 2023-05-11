@@ -57,7 +57,10 @@
       const formInput = document.querySelector('.msger-input');
       var name = prompt("Digite seu nome");
       var date = new Date();
-      
+      let minutes;
+      /*if (minutes < 10) {
+         
+      */
       form.addEventListener('submit', (event) => {
          event.preventDefault();
          const message = formInput.value.trim(); 
@@ -65,7 +68,7 @@
             push(messagesRef, {
                name: name, 
                message: message,
-               date: date.getHours() + ":" + date.getMinutes()
+               date: date.getHours() + ":" + date.getMinutes().toString().padStart(2, "0")
             }); formInput.value = ''; 
          } 
       });
@@ -90,7 +93,6 @@
                   </div>
                </div>`; 
             messageList.appendChild(messageElement);
-            messageList.scrollTop = messageList.scrollHeight;
          }
       });
    </script>
